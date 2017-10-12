@@ -19,13 +19,21 @@ const relay4 = () =>
     );
 
 const t200_6 = () =>
-    difference(
-        cylinder({r: 25.5, h: 14}),
-        cylinder({r: 15.5, h: 15})
-    ).setColor([1, 1, 0]);
+    rotate_extrude(
+        {fn: 72},
+        translate(
+            [25.5, 0, 0],
+            polygon([
+                [-3, -7], [-4, -6.6], [-4.5, -6], [-5, -5],
+                [-5,  5], [-4.5,  6], [-4,  6.6], [-3,  7],
+                [ 3,  7], [ 4,  6.6], [ 4.5,  6], [ 5,  5],
+                [ 5, -5], [ 4.5, -6], [ 4, -6.6], [ 3, -7]
+            ])
+        )
+    ).setColor([1, 1, 0, 0.5]);
 
 const main = () => union(
     relay4(),
     pcb(),
-    t200_6().translate([0, 0, -25])
+    t200_6().translate([0, 0, -15])
 );
