@@ -22,7 +22,7 @@ const t200_6 = () =>
     difference(
         cylinder({r: 25.5, h: 14}),
         cylinder({r: 15.5, h: 15})
-    );
+    ).setColor([1, 1, 0]);
 
 const main = () => union(
     relay4(),
