@@ -50,7 +50,7 @@ const coil = nTurns => {
         root: {union: el => el},
         pos: [0, 0, 0]
     });
-    return res.root;
+    return res.root.setColor([1, .3, .1]);
 };
 
 const main = () => coil(5 + 9/16);
