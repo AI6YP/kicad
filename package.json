@@ -1,0 +1,26 @@
+{
+  "name": "kicad",
+  "version": "1.0.0",
+  "description": "kicad library",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/kicad.git"
+  },
+  "author": "drom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/kicad/issues"
+  },
+  "homepage": "https://github.com/drom/kicad#readme",
+  "devDependencies": {
+    "@drom/eslint-config": "^0.7.0",
+    "eslint": "^4.9.0"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node4"
+  }
+}
