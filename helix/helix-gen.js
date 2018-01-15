@@ -8,16 +8,12 @@ const CSG = scad.csg.CSG;
 const CAG = scad.csg.CAG;
 
 // BEGIN
-const helixD = 5;
-const turns = 4;
 const pitch = 8 / 4.99;
 const wireRadius = 0.52;
 const angleStep = 5;
 const offset = 0.25 * 360 / angleStep;
 
-const coilRadius = helixD / 2;
 const loopStep = pitch * angleStep / 360;
-const numslices = turns * 360 / angleStep;
 const wireRadius3 = wireRadius * Math.sqrt(3) / 2;
 
 function compass3d (props) {
@@ -85,6 +81,8 @@ function cageGen (CSG, props) {
 }
 
 function helixGen (CSG, props) {
+	const numslices = props.turns * 360 / angleStep;
+	const coilRadius = props.helixD / 2;
     const cut = CSG.Polygon.createFromPoints(compass3d({
         // resolution: 32,
         radius: wireRadius
@@ -117,10 +115,17 @@ function helixGen (CSG, props) {
 	return core.translate([3, -coilRadius, 0]);
 }
 
-const main = () => {
-    const core0 = helixGen(CSG).setColor(1,0,0);
+function getParameterDefinitions () {
+	return [
+		{name: 'helixD', caption: 'Helix diameter [mm]', type: 'float', initial: 5},
+		{name: 'turns',  caption: 'Number of turns', type: 'float', initial: 4}
+	]
+};
+
+const main = (props) => {
+    const core0 = helixGen(CSG, props).setColor(1,0,0);
     const cage0 = cageGen(CSG, {H: 13, S: 5.5}).setColor(1,1,0);
-    const core1 = helixGen(CSG).setColor(0, 0, 1);
+    const core1 = helixGen(CSG, props).setColor(0, 0, 1);
     const cage1 = cageGen(CSG, {H: 13, S: 5.5}).setColor(0, 1, 1);
     const link = CSG.cube({
         corner1: [9, -.8, 4],
@@ -132,7 +137,7 @@ const main = () => {
 };
 // END
 
-const raw = stlSerializer(main());
+const raw = stlSerializer(main({turns: 4, helixD: 5}));
 const stl = Buffer.concat([Buffer.from(raw[0]), Buffer.from(raw[1]), Buffer.from(raw[2])]);
 
 process.stdout.write(stl);
