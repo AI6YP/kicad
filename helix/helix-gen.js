@@ -9,7 +9,7 @@ const CAG = scad.csg.CAG;
 
 // BEGIN
 const helixD = 5;
-const turns = 5;
+const turns = 4;
 const pitch = 8 / 4.99;
 const wireRadius = 0.52;
 const angleStep = 5;
@@ -44,7 +44,7 @@ function cageGen (CSG, props) {
     const min = props.min || 1.1;
 
     const bars = [-7, -6, -5, -4, -3, -2, 2, 3, 4, 5, 6, 7]
-    .map(el => (1.29 * el) / Math.PI)
+    .map(el => (1.23 * el) / Math.PI)
     .map(el => [S * Math.cos(el), S * Math.sin(el)])
     .reduce((res, el) => {
         return res.union(CSG.roundedCylinder({
@@ -61,9 +61,13 @@ function cageGen (CSG, props) {
         radius: S + min / 2,
         // resolution: 128
     }).subtract(CSG.cylinder({
+        start: [1, -4.8, 0],
+        end: [-3, -4.8, 0],
+        radius: 1.5
+    })).subtract(CSG.cylinder({
         start: [1, -6, 0],
         end: [-3, -6, 0],
-        radius: 1.4
+        radius: 1.8
     }));
 
     const ceiling = CSG.cylinder({
@@ -74,7 +78,7 @@ function cageGen (CSG, props) {
     }).subtract(CSG.cylinder({
         start: [0, 0, 0],
         end: [H + min + 1, 0, 0],
-        radius: 1.25
+        radius: 1.1
     }));
 
     return bars.union(floor).union(ceiling);
@@ -119,8 +123,8 @@ const main = () => {
     const core1 = helixGen(CSG).setColor(0, 0, 1);
     const cage1 = cageGen(CSG, {H: 13, S: 5.5}).setColor(0, 1, 1);
     const link = CSG.cube({
-        corner1: [9, -.5, 3.6],
-        corner2: [13.5, .5, -3.6]
+        corner1: [9, -.8, 4],
+        corner2: [13.5, .8, -4]
     });
 	return core0.union(cage0).translate([0, -5, 0])
 	.union(core1.union(cage1).rotateX(180).translate([0, 5, 0]))
