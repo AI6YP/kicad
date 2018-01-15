@@ -9,7 +9,7 @@ const CAG = scad.csg.CAG;
 
 // BEGIN
 const helixD = 5;
-const turns = 4.75;
+const turns = 5;
 const pitch = 8 / 4.99;
 const wireRadius = 0.52;
 const angleStep = 5;
