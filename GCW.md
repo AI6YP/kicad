@@ -1,7 +1,5 @@
 ## Grounded Coplanar Waveguide
 
-http://chemandy.com/calculators/coplanar-waveguide-with-ground-calculator.htm
-
 https://en.wikipedia.org/wiki/FR-4
 
 εr = 4.35?
