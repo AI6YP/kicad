@@ -15,10 +15,10 @@ https://www.embedded.com/print/4398951
 
   * εr of the PCB: 4.45
   * thickness of the dielectric: 1.43 mm (1.5 - 2 x 0.035)
-  * Enter the width of the track: 2.4 mm
-  * Enter the width of the gap: 1 mm
+  * Enter the width of the track: 2.25 mm
+  * Enter the width of the gap: 0.8 mm
 
 http://chemandy.com/calculators/coplanar-waveguide-with-ground-calculator.htm
 
-49.82 Ohm
+50 Ohm
   
