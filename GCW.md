@@ -14,7 +14,7 @@ https://www.embedded.com/print/4398951
 
 
   * εr of the PCB: 4.45
-  * Thickness of the dielectric: 1.43 mm (1.5 - 2 x 0.035 Cu)
+  * Thickness of the dielectric: 1.43 mm (1.5 - 2 * 0.035 Cu)
   * Width of the track: 2.25 mm
   * Width of the gap: 0.8 mm
 
