@@ -28,31 +28,32 @@ function compass3d (props) {
 
 function arcGen (CSG, props) {
     props = props || {};
-    const wireD = props.wireD || 1;
+    const wireRadius = props.wireRadius || 1;
     const length = props.length || 1;
+    const endRadius = props.endRadius || 1;
     const cut = CSG.Polygon.createFromPoints(compass3d({
         // resolution: 32,
-        radius: wireD / 2
+        radius: wireRadius
     }));
 
     const path = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         .map(i => i * Math.PI / 16)
         .map(angle => ({
             angle: 180 * angle / Math.PI,
-            x: -Math.cos(angle),
-            y: Math.sin(angle)
+            x: endRadius * -Math.cos(angle),
+            y: endRadius * Math.sin(angle)
         }))
         .concat([{
             angle: 90,
             x: length,
-            y: 1
+            y: endRadius
         }])
         .concat([8, 9, 10, 11, 12, 13, 14, 15, 16]
             .map(i => i * Math.PI / 16)
             .map(angle => ({
                 angle: 180 * angle / Math.PI,
-                x: -Math.cos(angle) + length,
-                y: Math.sin(angle)
+                x: endRadius * -Math.cos(angle) + length,
+                y: endRadius * Math.sin(angle)
             })));
 
     return cut.solidFromSlices({
@@ -72,8 +73,9 @@ function arcGen (CSG, props) {
 
 function getParameterDefinitions () {
     return [
-        {name: 'wireD', caption: 'wire diameter [mm]', type: 'float', initial: 1},
-        {name: 'length', caption: 'length [mm]', type: 'float', initial: 5}
+        {name: 'wireRadius', caption: 'wire radius [mm]', type: 'float', initial: 1},
+        {name: 'length', caption: 'length [mm]', type: 'float', initial: 5},
+        {name: 'endRadius', caption: 'end radius [mm]', type: 'float', initial: 3}
     ];
 }
 
