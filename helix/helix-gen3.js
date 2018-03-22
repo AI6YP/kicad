@@ -229,7 +229,7 @@ const main = (props) => {
 
     return core0.setColor(1, 0, 0).union(cage0.setColor(1, 1, 0)).translate([0, -5, 0])
         .union(
-            core0.setColor(0, 0, 1).union(cage0.setColor(0, 1, 1)).rotateX(180).rotateY(180).translate([canH, 5, 0])
+            core0.setColor(0, 0, 1).union(cage0.setColor(0, 1, 1)).rotateX(180).translate([0, 5, 0])
         )
         .union(link.translate([2.6, 0, 0]))
         .union(link.translate([canH - 2.6, 0, 0]))
@@ -241,8 +241,10 @@ const main = (props) => {
 
 const raw = stlSerializer(main({
     helixD: 5,
-    turns: 4.33,
-    pitch: 1.6,
+    // turns: 6, // 915 MHz
+    turns: 4.33, // 1270 MHz
+    // pitch: 1.3, // 915 MHz
+    pitch: 1.6, // 1270 MHz
     ringD: 7,
     wireD: 0.9,
     canH: 13,
