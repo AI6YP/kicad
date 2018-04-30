@@ -77,7 +77,7 @@ function getParameterDefinitions () {
 function compass3d (props) {
     props = props || {};
     const radius = props.radius || 1;
-    const resolution = props.resolution || 16;
+    const resolution = props.resolution || 4;
     const adelta = 2 * Math.PI / resolution;
     let res = [];
     for(let i = 0; i < resolution; i++) {
@@ -96,7 +96,7 @@ function arcGen (CSG, props) {
     const length = props.length || 1;
     const endRadius = props.endRadius || 1;
     const cut = CSG.Polygon.createFromPoints(compass3d({
-        // resolution: 32,
+        resolution: 8,
         radius: wireRadius
     }));
 
@@ -208,7 +208,7 @@ function helixGen (CSG, props) {
 
     const cut = CSG.Polygon.createFromPoints(compass3d({
         // resolution: 32,
-        radius: wireRadius
+        radius: 1.2 * wireRadius
     }));
 
     const helix = cut.solidFromSlices({
@@ -370,28 +370,28 @@ const main = (props) => {
 
 const raw = stlSerializer(main({
 
-    // // 915h2v4
+    // // 915h2v5
     // turns: 6.25,
     // backTurns: 0.33,
     // pitch: 1.35,
     // stages: 2,
     // stageSpacing: 2,
 
-    // // 915h3v4
+    // // 915h3v5
     // turns: 6.25,
     // backTurns: 0.33,
     // pitch: 1.35,
     // stages: 3,
     // stageSpacing: 2.25,
 
-    // // 1270h2v4
+    // // 1270h2v5
     // turns: 4.5,
     // backTurns: 0.25,
     // pitch: 1.7,
     // stages: 2,
     // stageSpacing: 2,
 
-    // 1270h3v4
+    // 1270h3v5
     turns: 4.5,
     backTurns: 0.25,
     pitch: 1.7,
