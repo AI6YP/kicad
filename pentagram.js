@@ -3,7 +3,7 @@ function getParameterDefinitions () {
     return [{
         name: 'scale',
         type: 'float',
-        initial: 20
+        initial: 25
     }, {
         name: 'height',
         type: 'float',
@@ -68,10 +68,19 @@ function main (props) {
         .translate([0, props.scale * 0.05])
         // .setColor([0, 1, 0])
 
-    return a
+    const bar1 = cube({size: [
+        props.scale,
+        props.scale * props.wall * 0.1,
+        3 * props.height
+    ]})
+        .translate([0, props.scale * 0.05, props.height / 2])
+        // .setColor([0, 1, 0])
+
+    return (
+        a
         .subtract(b)
         .subtract(c)
         .union(d)
         .subtract(e.subtract(bar))
-        // .union(bar)
+    );
 }
