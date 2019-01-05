@@ -59,10 +59,19 @@ function main (props) {
 
     const e = polygon(pentagon(props.scale * pental * (1 - props.wall)))
         .extrude({offset: [0, 0, props.height]});
+        
+    const bar = cube({size: [
+        props.scale,
+        props.scale * props.wall * 0.3,
+        3 * props.height
+    ], center: true})
+        .translate([0, props.scale * 0.05])
+        // .setColor([0, 1, 0])
 
     return a
         .subtract(b)
         .subtract(c)
         .union(d)
-        .subtract(e);
+        .subtract(e.subtract(bar))
+        // .union(bar)
 }
