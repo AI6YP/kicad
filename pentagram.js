@@ -1,24 +1,24 @@
+'use strict';
+
+// BEGIN
 
 function getParameterDefinitions () {
-    return [{
-        name: 'scale',
-        type: 'float',
-        initial: 25
-    }, {
-        name: 'height',
-        type: 'float',
-        initial: 3
-    }, {
-        name: 'wall',
-        type: 'float',
-        initial: 0.25
-    }];
+    return [
+        {name: 'scale',  type: 'float', initial: 35},
+        {name: 'height', type: 'float', initial: 3},
+        {name: 'wall', type: 'float', initial: 0.3}
+    ];
 }
 
+const kc = Math.cos(2 * Math.PI / 5);
+
+const mc = Math.cos(Math.PI / 5);
+
+const lmc = Math.tan(Math.PI / 5);
+
 const pental = (() => {
-    const alfa = 2 * Math.PI / 5;
-    const x = Math.cos(alfa);
-    const y = x * Math.tan(alfa / 2);
+    const x = kc;
+    const y = x * lmc;
     return Math.sqrt(x*x + y*y);
 })();
 
@@ -41,39 +41,66 @@ const pentagon = s => [0, 1, 2, 3, 4]
     .map(alfa => [
         s * Math.sin(alfa),
         s * Math.cos(alfa)
-]);
+    ]);
+
+const extruder = fn => (s, h) => polygon(fn(s)).extrude({offset: [0, 0, h]});
+
+const pentagram3 = extruder(pentagram);
+
+const pentagon3 = extruder(pentagon);
+
+const stamp = (s, h, wall) => {
+    const m = mc * s;
+    const k = kc * s;
+    const mk2 = (m + k) / 2;
+    const b = mk2 - k;
+
+    const topBar = cube({size: [5 * s, mk2, h]})
+        .setColor([0, 1, 0]);
+
+    const botBar = cube({size: [-5 * s, -mk2, h]})
+        .setColor([0, 0, 1]);
+
+    const bars = topBar.union(botBar)
+        .translate([0, b, h / 2]);
+
+    const mbar = cube({size: [11 * s, wall, 5 * h], center: true})
+        .translate([0, b, 0]);
+
+    return pentagon3(s, 2 * h)
+        .setColor([0, 0, 0])
+        .union(bars)
+        .subtract(mbar);
+};
+
 
 function main (props) {
-    const a = polygon(pentagram(props.scale))
-        .extrude({offset: [0, 0, props.height]})
+    const a = pentagram3(props.scale, props.height);
 
-    const b = polygon(pentagram(props.scale * (1 - props.wall)))
-        .extrude({offset: [0, 0, props.height + 1]})
+    const b = pentagram3(props.scale * (1 - props.wall), props.height + 1);
 
-    const c = polygon(pentagon(props.scale / 2))
-        .extrude({offset: [0, 0, props.height + 1]})
-        .translate([0, 0, props.height / 2])
+    const c = pentagon3(props.scale / 2, props.height + 1)
+        .translate([0, 0, props.height / 2]);
 
-    const d = polygon(pentagon(props.scale * pental))
-        .extrude({offset: [0, 0, props.height]})
+    const d = pentagon3(props.scale * pental, 1.2 * props.height);
 
-    const e = polygon(pentagon(props.scale * pental * (1 - props.wall)))
-        .extrude({offset: [0, 0, props.height]})
-        
-    const bar = cube({size: [
-        props.scale,
-        props.scale * props.wall * 0.3,
-        3 * props.height
-    ], center: true})
-        .translate([0, props.scale * 0.05])
+    const e = stamp(
+        props.scale * pental * (1 - props.wall),
+        props.height,
+        props.scale * props.wall * 0.3
+    );
 
     return (
         a
-        .subtract(b)
-        .setColor([1, 0, 0])
-        .subtract(c.setColor([0, 0, 0]))
-        .union(
-            d.subtract(e.subtract(bar)).setColor([1, 0, 0])
-        )
+            .subtract(b)
+            .setColor([1, 0, 0])
+            .subtract(c.setColor([0, 0, 0]))
+            .union(
+                d.subtract(e).setColor([1, 0, 0])
+            )
     );
 }
+
+// END
+
+/* global polygon */
