@@ -18,12 +18,12 @@
   "homepage": "https://github.com/drom/kicad#readme",
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
-    "@jscad/scad-api": "^0.5.1",
-    "@jscad/stl-serializer": "^0.1.1",
-    "@jscad/svg-deserializer": "^0.4.1",
+    "@jscad/modeling": "^2.10.0",
+    "@jscad/stl-deserializer": "^2.1.19",
+    "@jscad/stl-serializer": "^2.1.12",
     "eslint": "^4.9.0"
   },
   "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint4/node4"
+    "extends": "@drom/eslint-config/eslint4/node8"
   }
 }
