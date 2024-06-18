@@ -52,7 +52,7 @@
   (pad "31" smd roundrect (at -1.25 -2.5) (size 0.25 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
   (pad "32" smd roundrect (at -1.75 -2.5) (size 0.25 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
   (pad "33" smd rect (at 0 0) (size 3.7 3.7) (layers "F.Cu" "F.Mask"))
-  (model "../AI6YP.3dshapes/ESP-QFN-32-5x5mm-P0.5mm-EP3.7x3.7mm.step"
+  (model "${AI6YP_3DMODEL_DIR}/ESP-QFN-32-5x5mm-P0.5mm-EP3.7x3.7mm.step"
     (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0))
   )
 )

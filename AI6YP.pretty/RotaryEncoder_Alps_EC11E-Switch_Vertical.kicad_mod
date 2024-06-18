@@ -1,0 +1,121 @@
+(footprint "RotaryEncoder_Alps_EC11E-Switch_Vertical"
+  (version 20240108)
+  (generator "pcbnew")
+  (generator_version "8.0")
+  (layer "F.Cu")
+  (descr "Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html")
+  (tags "rotary encoder")
+  (property "Reference" "REF**"
+    (at 0 -8 0)
+    (layer "F.SilkS")
+    (uuid "d8b4ea29-2263-46ad-8021-f771c5544363")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Value" "RotaryEncoder_Alps_EC11E-Switch_Vertical"
+    (at 0 12 0)
+    (layer "F.Fab")
+    (uuid "866aae23-5c15-48ba-bfed-550261ad4b22")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Footprint" ""
+    (at 0 0 0)
+    (unlocked yes)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "8b2c011c-d780-4e6c-8f38-459b73a40f22")
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+    )
+  )
+  (property "Datasheet" ""
+    (at 0 0 0)
+    (unlocked yes)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "247c9c81-a67d-4b1c-ae9a-825f3b5bda25")
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+    )
+  )
+  (property "Description" ""
+    (at 0 0 0)
+    (unlocked yes)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "95c86b0a-83b1-493d-96eb-ec1eff5e46ef")
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+    )
+  )
+  (attr through_hole)
+  (fp_line (start -6.00 -6.00) (end -2.00 -6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start  2.00 -6.00) (end  6.00 -6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start  6.00 -6.00) (end  6.00 -4.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start  6.00  4.00) (end  6.00  6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start -6.00 -6.00) (end -6.00 -4.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start -6.00  4.00) (end -6.00  6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start -6.00  6.00) (end -2.00  6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start  2.00  6.00) (end  6.00  6.00) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start -9 -8) (end  9 -8) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start  9 -8) (end  9  8) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start  9  8) (end -9  8) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start -9  8) (end -9 -8) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+
+  (fp_line (start -5.5 -5.5) (end  5.5 -5.5) (stroke (width 0.12) (type solid)) (layer "F.Fab"))
+  (fp_line (start  5.5 -5.5) (end  5.5  5.5) (stroke (width 0.12) (type solid)) (layer "F.Fab"))
+  (fp_line (start  5.5  5.5) (end -5.5  5.5) (stroke (width 0.12) (type solid)) (layer "F.Fab"))
+  (fp_line (start -5.5  5.5) (end -5.5 -5.5) (stroke (width 0.12) (type solid)) (layer "F.Fab"))
+
+  (fp_text user "${REFERENCE}"
+    (at 0 10 0)
+    (layer "F.Fab")
+    (uuid "182ff091-1254-48a3-80ef-6b6995a78ef9")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (pad "A"  thru_hole circle (at -7.500 -2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "C"  thru_hole circle (at -7.500  0.000) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "B"  thru_hole circle (at -7.500  2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "MP" smd roundrect (at 0 -8) (size 3 5) (layers "F.Cu" "F.Mask"))
+  (pad "MP" smd roundrect (at 0  8) (size 3 5) (layers "F.Cu" "F.Mask"))
+  (pad "D"  thru_hole circle (at  7.000 -2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "E"  thru_hole circle (at  7.000  2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "A1" thru_hole circle (at 9.500 -2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "C1" thru_hole circle (at 9.500  0.000) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (pad "B1" thru_hole circle (at 9.500  2.500) (size 2 2) (drill 1) (layers "*.Cu" "*.Mask"))
+  (model "${KICAD8_3DMODEL_DIR}/Rotary_Encoder.3dshapes/RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm.wrl"
+    (offset
+      (xyz 0 0 0)
+    )
+    (scale
+      (xyz 1 1 1)
+    )
+    (rotate
+      (xyz 0 0 0)
+    )
+  )
+)

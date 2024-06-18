@@ -1,0 +1,64 @@
+(footprint "SMA-edge"
+  (version 20240108)
+  (generator "pcbnew")
+  (generator_version "8.0")
+  (layer "F.Cu")
+  (descr "https://docs.rs-online.com/43db/A700000007444476.pdf")
+  (tags "SMA")
+  (property "Reference" "REF**" (at -4 -2 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Value" "SMA-edge" (at 5 6 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Footprint" "" (at 0 0 0) (unlocked yes) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+  (property "Datasheet" "https://docs.rs-online.com/43db/A700000007444476.pdf" (at 0 0 0) (unlocked yes) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+  (property "Description" "" (at 0 0 0) (unlocked yes) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+
+  (attr smd)
+
+  (fp_line (start -3.00  5.6) (end -3.00 -5.6) (stroke (width 0.05) (type solid)) (layer "B.CrtYd"))
+  (fp_line (start  14.5 -5.6) (end -3.00 -5.6) (stroke (width 0.05) (type solid)) (layer "B.CrtYd"))
+  (fp_line (start  14.5 -5.6) (end  14.5  5.6) (stroke (width 0.05) (type solid)) (layer "B.CrtYd"))
+  (fp_line (start  14.5  5.6) (end -3.00  5.6) (stroke (width 0.05) (type solid)) (layer "B.CrtYd"))
+
+  (fp_line (start -3.00  5.6) (end -3.00 -5.6) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start  14.5 -5.6) (end -3.00 -5.6) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start  14.5 -5.6) (end  14.5  5.6) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start  14.5  5.6) (end -3.00  5.6) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+
+  (fp_text user "${REFERENCE}" (at 5 0 -90) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+
+  (pad "1" smd rect (at -1 0) (size 3 1) (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "2" smd rect (at 0 -4.5) (size 5 2.5) (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "2" smd rect (at 0 -4.5) (size 5 2.5) (layers "B.Cu" "B.Paste" "B.Mask"))
+
+  (pad "2" smd rect (at 0 4.5) (size 5 2.5) (layers "F.Cu" "F.Paste" "F.Mask"))
+  (pad "2" smd rect (at 0 4.5) (size 5 2.5) (layers "B.Cu" "B.Paste" "B.Mask"))
+
+  (pad "2" smd roundrect (at 1.4 -1.5) (size 2.2 1) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2380952381) )
+  (pad "2" smd roundrect (at 1.4  1.5) (size 2.2 1) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2380952381) )
+
+  (zone (net 0) (net_name "") (layers "F.Cu")  (hatch edge 0.5)
+    (connect_pads (clearance 0))
+    (min_thickness 0.25) (filled_areas_thickness no)
+    (keepout (tracks not_allowed) (vias not_allowed) (pads not_allowed) (copperpour not_allowed) (footprints allowed))
+    (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+    (polygon
+      (pts
+        (xy 0.5 -1)
+        (xy 2.5 -1)
+        (xy 2.5 1)
+        (xy 0.5 1)
+      )
+    )
+  )
+
+  (model "${AI6YP_3DMODEL_DIR}/SMA-edge.wrl"
+    (offset
+      (xyz 0 0 0)
+    )
+    (scale
+      (xyz 1 1 1)
+    )
+    (rotate
+      (xyz 0 0 0)
+    )
+  )
+)

@@ -68,7 +68,25 @@
   (pad "47" smd roundrect (at -2.25 -3.5) (size 0.25 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
   (pad "48" smd roundrect (at -2.75 -3.5) (size 0.25 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
   (pad "49" smd rect (at 0 0) (size 5.6 5.6) (layers "F.Cu" "F.Mask"))
-  (model "../AI6YP.3dshapes/ATMEL-QFN-48-7x7mm-P0.5mm-EP5.6x5.6mm.step"
+
+  (pad "49" thru_hole oval (at 0 0) (size 4 4) (drill 3) (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+
+  (pad "" smd roundrect (at -2.10 -2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at -0.70 -2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  0.70 -2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  2.10 -2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+
+  (pad "" smd roundrect (at -2.10 -0.70) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at -2.10  0.70) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  2.10 -0.70) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  2.10  0.70) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+
+  (pad "" smd roundrect (at -2.10  2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at -0.70  2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  0.70  2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at  2.10  2.10) (size 1 1) (layers "F.Paste") (roundrect_rratio 0.25))
+
+  (model "${AI6YP_3DMODEL_DIR}/ATMEL-QFN-48-7x7mm-P0.5mm-EP5.6x5.6mm.step"
     (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0))
   )
 )
