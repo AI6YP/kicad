@@ -1,13 +1,3 @@
 # kicad
 
 kicad library
-
-## 3D Models
-
-https://github.com/jscad/OpenJSCAD.org
-
-http://happyrobotlabs.com/posts/tutorials/tutorial-3d-kicad-parts-using-openscad-and-wings3d/
-
-http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
-
-http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
