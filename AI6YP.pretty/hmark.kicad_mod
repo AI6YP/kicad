@@ -1,0 +1,7 @@
+(footprint "hmark" (version 20231219) (generator pcbnew)
+  (layer "F.Cu")
+  (descr "generated")
+  (tags "watch")
+  (attr smd)
+  (pad "1" thru_hole oval (at 0 0) (size 1.6 3.2) (drill 1.2 2.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+)

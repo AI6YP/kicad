@@ -1,0 +1,255 @@
+(footprint "EN6528_encoder"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "USB TYPE C, VERT RCPT PCB, SMT, https://gct.co/files/drawings/usb4115.pdf")
+	(tags "USB C Type-C Receptacle SMD")
+	(property "Reference" "REF**"
+		(at 0 -6 0)
+		(layer "F.SilkS")
+		(uuid "f4afb7ff-b070-4f3a-bcf2-ef64726526c0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "EN6528_encoder"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "9cbcadba-9882-4e22-bada-151b78384071")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dc53fe49-441c-4051-b3d5-7c7e1e37683d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2204251630_Kailh-CEN652812A02_C400282.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e778d6b4-9f3e-42fa-858e-65e686e5eb75")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Quadrature Encoder"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed325ed4-367e-4b62-b4c4-491e0a906576")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4 -1)
+		(end -4 3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fb7c4ac3-6a9f-458d-8ffa-900f85b842e9")
+	)
+	(fp_line
+		(start -4 3)
+		(end 4 3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bd5bb38f-828b-4e46-a9d0-32f6a0673e05")
+	)
+	(fp_line
+		(start -0.102886 -3.25)
+		(end -4 -1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2d95b40a-68b2-471b-8930-59f8450b2792")
+	)
+	(fp_line
+		(start 4 -1)
+		(end 0.102886 -3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "541acc0e-f135-4e7b-a85f-9a444d25a520")
+	)
+	(fp_line
+		(start 4 3)
+		(end 4 -1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4d2dd29d-7474-4b75-a79b-80c1433f562d")
+	)
+	(fp_line
+		(start -3 -1)
+		(end -2 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3d1ff0e6-92d8-4e0c-baf3-b3d71c6fb6eb")
+	)
+	(fp_line
+		(start -3 3)
+		(end -3 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5fe4dfb9-78c2-4092-9f03-981c86b315a8")
+	)
+	(fp_line
+		(start -3 3)
+		(end 3 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0494945d-30aa-4dfc-a7db-a76e4144928b")
+	)
+	(fp_line
+		(start 3 -1)
+		(end 2 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4598c8a3-dad2-456d-b5da-369231e0cce3")
+	)
+	(fp_line
+		(start 3 3)
+		(end 3 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3b81d06a-ce18-4bca-803e-30b2703c3dd0")
+	)
+	(fp_arc
+		(start -2 -2)
+		(mid 0 -2.828427)
+		(end 2 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4957628a-0487-4b2e-9e46-2b76a5391512")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "34b014e2-2f36-44c5-ae18-6c7635d94797")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -1 2.1)
+		(size 0.9 0.9)
+		(drill 0.9)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "8aa1c0d0-713a-4f0f-85f1-441cf6e1592a")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "7033bf9b-df29-42d8-9b03-845fae2b88bd")
+	)
+	(pad "" np_thru_hole circle
+		(at 1 -1.4)
+		(size 0.7 0.7)
+		(drill 0.7)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "dcbe35af-700b-460d-8251-6004d377548a")
+	)
+	(pad "A" smd rect
+		(at 2 3.85)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "4956ae38-b38f-4967-80b8-94cf5e8d8027")
+	)
+	(pad "B" smd rect
+		(at -2 3.85)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "9c29dd36-677b-47f5-872d-bec46fcd4031")
+	)
+	(pad "C" smd rect
+		(at 0 3.85)
+		(size 1.3 1.3)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "26d3c991-a860-42a2-806c-195269bd5897")
+	)
+	(pad "MP" smd rect
+		(at -3.95 0)
+		(size 1.7 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "868642aa-3ca9-43a9-bb03-49725b860acd")
+	)
+	(pad "MP" smd rect
+		(at 3.95 0)
+		(size 1.7 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "01b69554-7666-452c-b63c-c13569ca8be3")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4115-03-C.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
