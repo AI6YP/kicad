@@ -333,6 +333,9 @@
 		(embedded_fonts no)
 	)
 	(symbol "74LVC2G14"
+		(pin_names
+			(offset 0.002)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
