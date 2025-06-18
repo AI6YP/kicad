@@ -988,7 +988,10 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "AS179-92LF"
+	(symbol "AS179"
+		(pin_names
+			(offset 0.002)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1000,7 +1003,7 @@
 				)
 			)
 		)
-		(property "Value" "LP2985"
+		(property "Value" "AS179"
 			(at 0 -5 0)
 			(effects
 				(font
@@ -1027,7 +1030,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "150mA, Low-Noise, Low-Dropout Regulator With Shutdown"
+		(property "Description" "PHEMT GaAs IC SPDT Switch 0.02–3 GHz"
 			(at 0 -13 0)
 			(effects
 				(font
@@ -1054,7 +1057,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "AS179-92LF_0_1"
+		(symbol "AS179_0_1"
 			(polyline
 				(pts
 					(xy -2 4) (xy -3 3)
@@ -1068,7 +1071,7 @@
 				)
 			)
 		)
-		(symbol "AS179-92LF_1_1"
+		(symbol "AS179_1_1"
 			(rectangle
 				(start -3 4)
 				(end 3 -4)
@@ -1083,7 +1086,7 @@
 			(pin input line
 				(at -4 2 0)
 				(length 1)
-				(name "i"
+				(name "rf2"
 					(effects
 						(font
 							(size 1 1)
@@ -1101,7 +1104,7 @@
 			(pin power_in line
 				(at -4 0 0)
 				(length 1)
-				(name "GND"
+				(name "gnd"
 					(effects
 						(font
 							(size 1 1)
@@ -1119,7 +1122,7 @@
 			(pin input line
 				(at -4 -2 0)
 				(length 1)
-				(name "off"
+				(name "rf1"
 					(effects
 						(font
 							(size 1 1)
@@ -1137,7 +1140,25 @@
 			(pin output line
 				(at 4 2 180)
 				(length 1)
-				(name "o"
+				(name "vc2"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 4 0 180)
+				(length 1)
+				(name "rfc"
 					(effects
 						(font
 							(size 1 1)
@@ -1155,7 +1176,7 @@
 			(pin passive line
 				(at 4 -2 180)
 				(length 1)
-				(name "BP"
+				(name "vc1"
 					(effects
 						(font
 							(size 1 1)
@@ -14111,6 +14132,191 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "LP2985"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 5 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "LP2985"
+			(at 0 -5 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "AI6YP:TSOT-23-5"
+			(at 0 -9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 -15 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "150mA, Low-Noise, Low-Dropout Regulator With Shutdown"
+			(at 0 -13 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "Gate Driver"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LP2985_0_1"
+			(polyline
+				(pts
+					(xy -2 4) (xy -3 3)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LP2985_1_1"
+			(rectangle
+				(start -3 4)
+				(end 3 -4)
+				(stroke
+					(width 0.2)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -4 2 0)
+				(length 1)
+				(name "i"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -4 0 0)
+				(length 1)
+				(name "GND"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -4 -2 0)
+				(length 1)
+				(name "off"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 4 2 180)
+				(length 1)
+				(name "o"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 4 -2 180)
+				(length 1)
+				(name "BP"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "MABA-007159"
 		(pin_names
 			(hide yes)
@@ -24319,6 +24525,9 @@
 		(embedded_fonts no)
 	)
 	(symbol "YP3035W"
+		(pin_names
+			(offset 0.002)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -24330,7 +24539,7 @@
 				)
 			)
 		)
-		(property "Value" "AS179-92LF"
+		(property "Value" "YP3035W"
 			(at 0 -13 0)
 			(effects
 				(font
