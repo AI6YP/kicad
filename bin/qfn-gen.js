@@ -114,5 +114,6 @@ main([
   // {vendor: 'GIWIN', pinCount: 88, bodySize: 10, pitch: .4, epSize: 6.74, lead: {width: .2,  length: 0.4}}
   // {vendor: 'WCH',   pinCount: 28, bodySize:  4, pitch: .4, epSize: 2.8,  lead: {width: .2, length: 0.4}, model3d: 'step'},
   // {vendor: 'WCH', pinCount: 68, bodySize:  8, pitch: .4, epSize: 6.2,  lead: {width: .2, length: 0.4}, model3d: 'step'}
-  {vendor: 'RFINT', pinCount: 16, bodySize:  4, pitch: .65, epSize: 2.15,  lead: {width: .3, length: 0.3}, model3d: 'step'}
+  {vendor: 'RFINT', pinCount: 16, bodySize:  4, pitch: .65, epSize: 2.15,  lead: {width: .3, length: 0.3}, model3d: 'step'},
+  {vendor: 'SKY', pinCount: 16, bodySize:  2, pitch: .5, epSize: 0.8, lead: {width: .25, length: 0.3}, model3d: 'step'}
 ]);
