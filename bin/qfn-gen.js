@@ -76,7 +76,7 @@ ${pads.map(pad => `\
   (pad "${pad.idx}" smd roundrect (at ${pad.at.join(' ')}) (size ${pad.size.join(' ')}) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))`
   ).join('\n')}
   (pad "${pads.length + 1}" smd rect (at 0 0) (size ${cfg.epSize} ${cfg.epSize}) (layers "F.Cu" "F.Mask"))
-  (pad "${pads.length + 1}" thru_hole oval (at 0 0) (size ${0.7 * cfg.epSize} ${0.7 * cfg.epSize}) (drill ${0.5 * cfg.epSize}) (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+  (pad "${pads.length + 1}" thru_hole oval (at 0 0) (size ${0.9 * cfg.epSize} ${0.9 * cfg.epSize}) (drill ${0.8 * cfg.epSize}) (layers "*.Cu" "*.Mask") (remove_unused_layers no))
 ${genPaste(cfg.epSize)}
 ${cfg.model3d ? `\
   (model "../AI6YP.3dshapes/${name}.${cfg.model3d}" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
@@ -84,7 +84,7 @@ ${cfg.model3d ? `\
 })
 `;
 
-const exposure = 0.4; // extra pads outside of package
+const exposure = 0.7; // extra pads outside of package
 
 async function main (specs) {
   for (const cfg of specs) {
@@ -113,5 +113,6 @@ main([
   // {vendor: 'ATMEL', pinCount: 48, bodySize:  7, pitch: .5, epSize: 5.6,  lead: {width: .25, length: 0.4}, model3d: 'step'},
   // {vendor: 'GIWIN', pinCount: 88, bodySize: 10, pitch: .4, epSize: 6.74, lead: {width: .2,  length: 0.4}}
   // {vendor: 'WCH',   pinCount: 28, bodySize:  4, pitch: .4, epSize: 2.8,  lead: {width: .2, length: 0.4}, model3d: 'step'},
-  {vendor: 'WCH', pinCount: 68, bodySize:  8, pitch: .4, epSize: 6.2,  lead: {width: .2, length: 0.4}, model3d: 'step'}
+  // {vendor: 'WCH', pinCount: 68, bodySize:  8, pitch: .4, epSize: 6.2,  lead: {width: .2, length: 0.4}, model3d: 'step'}
+  {vendor: 'RFINT', pinCount: 16, bodySize:  4, pitch: .65, epSize: 2.15,  lead: {width: .3, length: 0.3}, model3d: 'step'}
 ]);
